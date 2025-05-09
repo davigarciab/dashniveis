@@ -38,7 +38,7 @@ categorias = ["MUITO CRÍTICO", "CRÍTICO", "INTERMEDIÁRIO", "ADEQUADO"]
 app = dash.Dash(__name__)
 
 # Carrega a planilha para obter as opções de filtros
-df = pd.read_excel("planilha_dash.xlsx", sheet_name="turmas")
+#df = pd.read_excel("planilha_dash.xlsx", sheet_name="turmas")
 # url do Google Sheets exportando como CSV
 url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSiSs-iPa7L6ShE9vUV-ZYqkFKD-kLC704QBi0z_nHN1NHBDIeVXunVss7mr1qugQ/pub?output=csv"
 df = pd.read_csv(url)
