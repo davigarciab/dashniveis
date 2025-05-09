@@ -2,6 +2,7 @@ import pandas as pd
 import dash
 from dash import dcc, html, Input, Output
 import plotly.graph_objects as go
+import os
 
 def classificar(total, disciplina):
     if disciplina.upper() == "MATEMÁTICA":
@@ -264,4 +265,5 @@ def atualizar_graficos(ano, serie, disciplina, curso):
     return fig_bar, fig_pizza, fig_pizza_serie
 
 if __name__ == "__main__":
-    app.run_server(host="0.0.0.0", port=10000)
+    port = int(os.environ.get("PORT", 10000))
+    app.run_server(host="0.0.0.0", port=port)
